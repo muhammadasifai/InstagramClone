@@ -1,5 +1,7 @@
 // this is one way to define the size of fonts.
 
+import { TextStyle } from "react-native";
+
 const size = {
     xs: 10,
     s: 12,
@@ -10,7 +12,7 @@ const size = {
   xxlg: 16,
 };
 
-const weight = {
+const weight: {[key: string]: TextStyle['fontWeight']} = {
     full: '900',
     semi: '600',
     bold: 'bold',

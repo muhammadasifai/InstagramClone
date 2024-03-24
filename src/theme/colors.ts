@@ -1,5 +1,10 @@
 const colors = {
-    primary: '#FD1d1d',
+    primary: '#0000FF',
+    error: '#FF0000',
+
+    accent: '#ED4956',
+
+    border: '#dcdcdc',
 
     white: '#fff',
     black: '#000',
