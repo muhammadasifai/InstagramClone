@@ -4,8 +4,10 @@
 // yarn add react-native-video
 // yarn add react-hook-form
 // yarn add react-native-image-picker
-// yarn add expo-modules
-// yarn add expo-camera
+// // npx install-expo-modules
+// // yarn add expo-camera
+// // npx expo install expo-camera
+// yarn add @react-navigation/native react-native-screen react-native-safe-area-context
 
 
 import { FlatList, ScrollView, StyleSheet, View } from 'react-native';
@@ -14,13 +16,14 @@ import CommentsScreen from './src/screens/CommentsScreen/CommentsScreen';
 import ProfileScreen from './src/screens/ProfileScreen/ProfileScreen';
 import EditProfileScreen from './src/screens/EditProfileScreen/EditProfileScreen';
 import PostUploadScreen from './src/screens/PostUploadScreen/PostUploadScreen';
+import PostUploadScreen1 from './src/screens/PostUploadScreen/PostUploadScreen1';
 
 
 
 const App = () => {
   return (
     <View style={styles.app}>
-      <PostUploadScreen />
+      <CommentsScreen />
     </View>
   )
 }
