@@ -8,9 +8,12 @@
 // // yarn add expo-camera
 // // npx expo install expo-camera
 // yarn add @react-navigation/native react-native-screen react-native-safe-area-context
+// npm install @react-navigation/native-stack
+// yarn add react-native-screens
 
 
-// import { FlatList, ScrollView, StyleSheet, View } from 'react-native';
+
+import { FlatList, ScrollView, StyleSheet, View } from 'react-native';
 // import HomeScreen from './src/screens/HomeScreen/HomeScreen';
 // import CommentsScreen from './src/screens/CommentsScreen/CommentsScreen';
 // import ProfileScreen from './src/screens/ProfileScreen/ProfileScreen';
@@ -30,8 +33,8 @@ const App = () => {
 
 export default App;
 
-// const styles = StyleSheet.create({
-//   app: {
-//     flex: 1,
-//   }
-// })
+const styles = StyleSheet.create({
+  app: {
+    flex: 1,
+  }
+})
