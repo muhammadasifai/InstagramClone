@@ -3,8 +3,10 @@ import styles from './styles';
 
 import user from '../../assets/data/user.json';
 import Button from '../../components/Button';
+import { useNavigation } from '@react-navigation/native';
 
 const ProfileHeader = () => {
+    const navigation = useNavigation();
     return (
         <View style={styles.root}>
             <View style={styles.headerRow}>
@@ -36,8 +38,10 @@ const ProfileHeader = () => {
                 <Button text='Edit Profile'
                     onPress={() => console.warn('On Edit Profile')}
                 />
-                <Button text='Another button'
-                    onPress={() => console.warn('On Edit Profile')}
+                <Button text='Go back'
+                    // onPress={() => console.warn('On Edit Profile')}
+                    onPress={() => navigation.goBack()}
+                // onPress={() => navigation.popToTop()} // popToTop: by this we go to the first one
                 />
             </View>
 

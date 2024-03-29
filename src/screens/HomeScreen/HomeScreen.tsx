@@ -12,6 +12,9 @@ import { useRef, useState } from 'react';
 const HomeScreen = () => {
     const [activePostId, setActivePostId] = useState<string | null>(null);
 
+    // console.log(props);
+    // props.navigation.navigate('UserProfile')
+
     const viewabilityConfig: ViewabilityConfig = {
         itemVisiblePercentThreshold: 51,
     }
@@ -27,7 +30,8 @@ const HomeScreen = () => {
     return (
         <FlatList
             data={posts}
-            renderItem={({ item }) => <FeedPost post={item} isVisible={activePostId === item.id} />}
+            renderItem={({ item }) =>
+                <FeedPost isVisible={activePostId === item.id} post={item} />}
             showsVerticalScrollIndicator={false}
             viewabilityConfig={viewabilityConfig}
             onViewableItemsChanged={onViewableItemsChanged.current}

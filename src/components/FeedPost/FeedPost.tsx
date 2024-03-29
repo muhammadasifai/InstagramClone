@@ -18,9 +18,11 @@ import DoublePressable from '../DoublePressable';
 import Carousal from '../Carousal';
 import VideoPlayer from '../VideoPlayer';
 
+import { useNavigation } from '@react-navigation/native';
+
 interface IFeedPost {
     post: IPost;
-    isVisible: boolean;
+    isVisible?: boolean;
 }
 
 
@@ -31,6 +33,14 @@ const FeedPost = ({ post, isVisible }: IFeedPost) => {
     //console.log('props', props)
     const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
     const [isLiked, setIsLiked] = useState(false);
+
+    const navigation = useNavigation();
+
+    // navigate
+    const navigateToUser = () => {
+        navigation.navigate('UserProfile', { userId: post.user.id });
+        // navigation.push('UserProfile')
+    }
 
     const toggleDescriptionExpanded = () => {
         setIsDescriptionExpanded(v => !v) // jub button press ho to ya 'setIsDescriptionExpanded' krna hay or jub ya huva huva ho to isay call krna hay 'isDescriptionExpanded'
@@ -73,7 +83,7 @@ const FeedPost = ({ post, isVisible }: IFeedPost) => {
                     }}
                     style={styles.userAvatar}
                 />
-                <Text style={styles.userName}>{post.user.username}</Text>
+                <Text onPress={navigateToUser} style={styles.userName}>{post.user.username}</Text>
 
                 <Entypo name='dots-three-horizontal' size={16} style={styles.threeDots} />
             </View>
