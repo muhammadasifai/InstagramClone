@@ -36,7 +36,7 @@ const ProfileHeader = () => {
             {/* Button */}
             <View style={{ flexDirection: 'row' }}>
                 <Button text='Edit Profile'
-                    onPress={() => console.warn('On Edit Profile')}
+                    onPress={() => navigation.navigate('Edit Profile')}
                 />
                 <Button text='Go back'
                     // onPress={() => console.warn('On Edit Profile')}
