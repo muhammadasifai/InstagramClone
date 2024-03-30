@@ -10,7 +10,7 @@ const ProfileScreen = () => {
     // console.log(route.params);
     const navigation = useNavigation();
 
-    const { userId } = route.params;
+    const userId = route.params?.userId;
     // query the user with userID
     // navigation.setOptions({ title: user.username })
 

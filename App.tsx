@@ -9,6 +9,7 @@
 // // npx expo install expo-camera
 // yarn add @react-navigation/native react-native-screen react-native-safe-area-context
 // npm install @react-navigation/native-stack
+// yarn add @react-navigation/bottom-tabs
 // yarn add react-native-screens
 
 
