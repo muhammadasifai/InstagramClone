@@ -6,8 +6,9 @@ import { Image, Text, View } from 'react-native';
 import { BottomTabBar } from '@react-navigation/bottom-tabs';
 import BottomTabNavigator from './BottomTabNavigator';
 import CommentsScreen from '../screens/CommentsScreen/CommentsScreen';
+import { RootNavigator } from './types';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootNavigator>();
 
 const Navigation = () => {
     return (

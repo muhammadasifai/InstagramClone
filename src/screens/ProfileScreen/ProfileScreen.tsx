@@ -4,11 +4,19 @@ import { useRoute, useNavigation } from '@react-navigation/native';
 import user from '../../assets/data/user.json';
 import ProfileHeader from './ProfileHeader';
 import FeedGridView from '../../components/FeedGridView/FeedGridView';
+import {
+    UserProfileNavigationProp,
+    UserProfileRouteProp,
+    MyProfileNavigationProp,
+    MyProfileRouteProp,
+} from '../../navigation/types';
 
 const ProfileScreen = () => {
-    const route = useRoute();
+    const route = useRoute<UserProfileRouteProp | MyProfileRouteProp>();
     // console.log(route.params);
-    const navigation = useNavigation();
+    const navigation = useNavigation<
+        UserProfileNavigationProp | MyProfileNavigationProp
+    >();
 
     const userId = route.params?.userId;
     // query the user with userID
