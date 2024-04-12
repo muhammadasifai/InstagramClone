@@ -11,6 +11,10 @@
 // npm install @react-navigation/native-stack
 // yarn add @react-navigation/bottom-tabs
 // yarn add react-native-screens
+// for deep linking
+// npx uri-scheme add notjustinsta --android
+// npx uri-scheme open notjustinsta:// --android
+// 9:00
 
 
 
