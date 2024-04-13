@@ -14,6 +14,9 @@
 // for deep linking
 // npx uri-scheme add notjustinsta --android
 // npx uri-scheme open notjustinsta:// --android
+// npx uri-scheme open notjustinsta://comments --android
+// npx uri-scheme open notjustinsta://user --android
+// npx uri-scheme open notjustinsta://user/123 --android
 // 9:00
 
 
